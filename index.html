@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>เครื่องคิดเลขง่าย ๆ</h1>
+  <input id="num1" type="number" placeholder="เลขที่ 1">
+  <input id="num2" type="number" placeholder="เลขที่ 2">
+  <div>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">×</button>
+    <button onclick="calculate('/')">÷</button>
+  </div>
+  <h2 id="result">ผลลัพธ์: </h2>
+  <script src="script.js"></script>
+</body>
+</html>
