@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="th">
+<head>
+    <meta charset="utf-8">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-note">
+        <p>จัดทำเพื่อส่งงานMini project โดย 008 และ 012</p>
+    </div>
+
+    <div class="calculator-container">
+        <h1>เครื่องคิดเลขง่าย ๆ</h1>
+        <div class="input-and-buttons">
+            <input id="num1" type="number" placeholder="เลขที่ 1">
+            <div class="button-group">
+                <button onclick="setOperator('+')">+</button>
+                <button onclick="setOperator('-')">-</button>
+                <button onclick="setOperator('*')">×</button>
+                <button onclick="setOperator('/')">÷</button>
+            </div>
+            <input id="num2" type="number" placeholder="เลขที่ 2">
+        </div>
+        
+        <button id="calculate-btn" onclick="calculate()">ประมวลผล</button>
+        <h2 id="result">ผลลัพธ์: </h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
