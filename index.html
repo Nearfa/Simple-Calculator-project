@@ -2,26 +2,29 @@
 <html lang="th">
 <head>
   <meta charset="utf-8">
-  <title>เครื่องคิดเลข</title>
+  <title>Simple Calculator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="header-text">
+    <p>จัดทำเพื่อส่งงานMini project โดย 008 และ 012</p>
+  </div>
+
   <div class="calculator-container">
-    <h1 class="calculator-title">เครื่องคิดเลขง่าย ๆ</h1>
-    <div class="input-group">
-      <input id="num1" type="number" placeholder="ตัวเลขตัวแรก">
-      <input id="num2" type="number" placeholder="ตัวเลขตัวที่สอง">
-    </div>
+    <h1>เครื่องคิดเลขง่าย ๆ</h1>
+    <input id="num1" type="number" placeholder="เลขที่ 1">
+    
     <div class="button-group">
       <button onclick="calculate('+')">+</button>
       <button onclick="calculate('-')">-</button>
       <button onclick="calculate('*')">×</button>
       <button onclick="calculate('/')">÷</button>
     </div>
-    <div class="result-display">
-      <h2 id="result">ผลลัพธ์: </h2>
-    </div>
+
+    <input id="num2" type="number" placeholder="เลขที่ 2">
+    <h2 id="result">ผลลัพธ์: </h2>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
