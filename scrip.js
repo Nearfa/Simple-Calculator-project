@@ -1,17 +1,39 @@
 function calculate(op) {
-  const a = parseFloat(document.getElementById("num1").value);
-  const b = parseFloat(document.getElementById("num2").value);
-  let result = "";
+    const num1Input = document.getElementById("num1");
+    const num2Input = document.getElementById("num2");
+    const resultElement = document.getElementById("result");
 
-  if (isNaN(a) || isNaN(b)) {
-    result = "กรุณาใส่ตัวเลขทั้งสองช่อง";
-  } else {
-    switch(op) {
-      case "+": result = a + b; break;
-      case "-": result = a - b; break;
-      case "*": result = a * b; break;
-      case "/": result = b !== 0 ? a / b : "หารด้วยศูนย์ไม่ได้"; break;
+    const a = parseFloat(num1Input.value);
+    const b = parseFloat(num2Input.value);
+
+    if (num1Input.value.trim() === "" || num2Input.value.trim() === "") {
+        resultElement.innerText = "ผลลัพธ์: กรุณาใส่ตัวเลขทั้งสองช่อง";
+        resultElement.style.color = "red";
+        return;
     }
-  }
-  document.getElementById("result").innerText = "ผลลัพธ์: " + result;
+
+    let result;
+    resultElement.style.color = "#007bff"; 
+
+    switch(op) {
+        case "+":
+            result = a + b;
+            break;
+        case "-":
+            result = a - b;
+            break;
+        case "*":
+            result = a * b;
+            break;
+        case "/":
+            if (b === 0) {
+                resultElement.innerText = "ผลลัพธ์: หารด้วยศูนย์ไม่ได้";
+                resultElement.style.color = "red";
+                return;
+            }
+            result = a / b;
+            break;
+    }
+
+    resultElement.innerText = "ผลลัพธ์: " + result;
 }
