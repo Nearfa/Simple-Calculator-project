@@ -1,9 +1,5 @@
 let currentOperator = '';
 
-/**
- * ฟังก์ชันนี้ใช้สำหรับตั้งค่าตัวดำเนินการเมื่อผู้ใช้กดปุ่ม
- * @param {string} op ตัวดำเนินการทางคณิตศาสตร์ (+, -, *, /)
- */
 function setOperator(op) {
     currentOperator = op;
 }
