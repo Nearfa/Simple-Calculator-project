@@ -8,15 +8,21 @@
 <body>
     <div class="header-note">
         <p>จัดทำเพื่อส่งงานMini project โดย 008 และ 012</p>
-        <p>ขั้นตอนการทำงาน</p>
-        <p>1.ใส่ตัวเลขใน"เลขที่ 1"</p>
-        <p>2.กดเครื่องหมาย"+,-,*,/"</p>
-        <p>3.ใส่ตัวเลขใน"เลขที่ 2"</p>
-        <p>4.กด"ประมวลผล"</p>
+        <p>ขั้นตอนการทำงาน:</p>
+        <ol>
+            <li>ใส่ตัวเลขในช่อง "เลขที่ 1"</li>
+            <li>กดเครื่องหมาย "+, -, *, /" ที่ต้องการ</li>
+            <li>ใส่ตัวเลขในช่อง "เลขที่ 2"</li>
+            <li>กดปุ่ม "ประมวลผล"</li>
+        </ol>
     </div>
 
     <div class="calculator-container">
         <h1>เครื่องคิดเลขง่าย ๆ</h1>
+        <div class="display-box">
+            <p id="calculation-display"></p>
+            <h2 id="result">0</h2>
+        </div>
         <div class="input-and-buttons">
             <input id="num1" type="number" placeholder="เลขที่ 1">
             <div class="button-group">
@@ -27,9 +33,10 @@
             </div>
             <input id="num2" type="number" placeholder="เลขที่ 2">
         </div>
-        
-        <button id="calculate-btn" onclick="calculate()">ประมวลผล</button>
-        <h2 id="result">ผลลัพธ์: </h2>
+        <div class="action-buttons">
+            <button id="clear-btn" onclick="clearEntry()">CE</button>
+            <button id="calculate-btn" onclick="calculate()">ประมวลผล</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
